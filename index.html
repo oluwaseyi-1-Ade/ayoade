@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+    <div class="text-center space-y-4">
+
+        <!-- Heading -->
+        <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
+            🎉 Happy Birthday, <b>OMOLOLA</b>! 🎂
+        </h1>
+        <!-- Slideshow Box -->
+        <!-- Placeholder for Slideshow -->
+        <div id="slideshow" class="w-[450px] h-[400px] mx-auto rounded-[30px] shadow-lg overflow-hidden"></div>
+
+        <!-- Footer Message -->
+        <p class="text-white text-lg md:text-xl font-light drop-shadow-md">
+            Wishing you a day filled with love and happiness!
+        </p>
+    </div>
+
+    <script>
+        const slideshow = document.getElementById("slideshow");
+        const image = document.querySelector('#image')
+        let images = [
+            "../assets/img/image1.jpg",
+            "../assets/img/image2.jpeg",
+            "../assets/img/image3.jpg",
+            "../assets/img/image4.jpeg",
+            "../assets/img/image5.jpg",
+            "../assets/img/image6.jpeg",
+            "../assets/img/image7.jpeg",
+            "../assets/img/image8.jpg",
+            "../assets/img/image9.jpg",
+            "../assets/img/image10.jpg",
+            "../assets/img/image11.jpg",
+            "../assets/img/image12.jpg",
+            "../assets/img/image13.jpg",
+            "../assets/img/image14.jpg",
+            "../assets/img/image15.jpg",
+            "../assets/img/image16.jpg",
+            "../assets/img/image17.jpg",
+            "../assets/img/image18.jpeg",
+            "../assets/img/image19.jpeg",
+            "../assets/img/image20.jpg",
+        ];
+
+
+
+        let currentIndex = 0;
+
+        setInterval(() => {
+            slideshow.style.backgroundImage = `url(${images[currentIndex]})`;
+            slideshow.style.backgroundSize = "cover";
+            slideshow.style.backgroundPosition = "center";
+
+            currentIndex = (currentIndex + 1) % images.length;
+        }, 3000);
+    </script>
+</body>
+
+</html>
